@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canalfy</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+</head>
+
+<style>
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+    body {
+        line-height: 1;
+    }
+
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    blockquote,
+    q {
+        quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: "";
+        content: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    /* CSS CUSTOM */
+
+    body {
+        font-family: "Lato", Helvetica, sans-serif;
+    }
+
+    .header {
+        display: flex;
+        width: 100%;
+        height: 110px;
+        justify-content: center;
+        align-items: center;
+        order: 1;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-canalfy {
+        width: 190px;
+        height: 44px;
+    }
+
+    .section-form {
+        display: flex;
+        width: 100%;
+        height: 600px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #031033;
+        color: #fff;
+    }
+
+    .section-form-title {
+        max-width: 800px;
+        font-size: 32px;
+        line-height: 36px;
+        text-align: center;
+    }
+
+    .section-form-wrapper-icone{
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .-form-mobile{
+        display: none;
+    }
+
+    .section-form-icone{
+        width: 80px;
+        text-align: center;
+    }
+
+    .section-form-icone > img{
+        width: 60px;
+        margin-top: 10px;
+    }
+
+    .section-form-icone > h3{
+        font-size: 11px;
+        color: #07c154;
+    }
+
+    .section-form-text {
+        font-size: 18px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .form>label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .form>label>span {
+        font-size: 12px;
+        padding-bottom: 5px;
+    }
+
+    .form>label>input {
+        width: 600px;
+        height: 45px;
+        border-radius: 5px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .form>button {
+        /* width: 607px; */
+        width: 100%; 
+        height: 65px;
+        border: 0px;
+        font-size: 32px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #07c154;
+        border-bottom: 5px solid #018939;
+        cursor: pointer;
+    }
+
+    .form>button:hover {
+        background-color: rgba(7, 193, 84, 0.9);
+    }
+
+    .section-case {
+        display: flex;
+        width: 100%;
+        height: 500px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        order: 2;
+    }
+
+    .section-case-title {
+        max-width: 800px;
+        font-size: 32px;
+        line-height: 36px;
+        text-align: center;
+        margin-bottom: 64px;
+    }
+
+    .section-case-title>span {
+        color: #07c154;
+    }
+
+    .section-case-wrapper-image {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-case-wrapper-row-image {
+        width: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 64px;
+    }
+
+    .section-case-image {
+        width: 130px;
+    }
+
+    .section-partner {
+        display: flex;
+        width: 100%;
+        height: 700px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #031033;
+        color: #fff;
+        order: 3;
+    }
+
+    .section-partner-title {
+        max-width: 800px;
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 36px;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .section-partner-text {
+        max-width: 800px;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: justify;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .section-partner-text:last-child {
+        text-align: right;
+    }
+
+    .section-partner-wrapper-icone {
+        display: flex;
+        width: 800px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .section-partner-icone {
+        margin-top: 32px;
+        text-align: center;
+    }
+
+    .section-partner-icone>img {
+        margin-bottom: 15px;
+    }
+
+    .section-partner-icone>h3 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .section-benefits {
+        display: flex;
+        width: 100%;
+        height: 700px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #031033;
+        order: 4;
+    }
+
+    .section-benefits-title {
+        max-width: 800px;
+        font-size: 42px;
+        font-weight: bold;
+        color: #07c154;
+        line-height: 36px;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .section-benefits-text {
+        max-width: 800px;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: justify;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .section-benefits-wrapper-icone {
+        display: flex;
+        width: 800px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .section-benefits-icone {
+        max-width: 175px;
+        margin-top: 32px;
+        text-align: center;
+    }
+
+    .section-benefits-icone>img {
+        margin-bottom: 15px;
+    }
+
+    .section-benefits-icone>p {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    .section-integration {
+        display: flex;
+        width: 100%;
+        height: 130px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #07c154;
+        color: #fff;
+        order: 5;
+    }
+
+    .section-integration-title {
+        font-size: 36px;
+        font-weight: bold;
+        background-color: #031033;
+        padding: 15px 30px;
+        border-radius: 20px;
+    }
+
+    .section-native {
+        display: flex;
+        width: 100%;
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #031033;
+        order: 6;
+    }
+
+    .section-native-image {
+        margin-bottom: 32px;
+    }
+
+    .section-native-title {
+        max-width: 800px;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: justify;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .footer {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #031033;
+        order: 7;
+    }
+
+    .footer-logo {
+        width: 150px;
+    }
+
+    .section-demonstration {
+        display: none;
+    }
+
+    .-section-mobile {
+        display: none;
+    }
+
+    @media (max-width: 800px) {
+        .header {
+            height: 70px;
+        }
+
+        .logo-canalfy {
+            width: 140px;
+            height: auto;
+        }
+
+        .section-form {
+            width: 100%;
+            height: auto;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .section-form-title {
+            width: 90%;
+            font-size: 28px;
+        }
+
+        .section-form-text {
+            width: 100%;
+            font-size: 16px;
+            text-align: center;
+            margin: 15px;
+        }
+
+        .form {
+            width: 90%;
+        }
+
+        .form>label {
+            width: 100%;
+        }
+
+        .form>label>input {
+            width: 99%;
+        }
+
+        .form>button {
+            width: 100%;
+            font-size: 24px;
+        }
+
+        .section-case {
+            height: auto;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .section-case-title {
+            width: 90%;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .section-case-wrapper-row-image {
+            width: 600px;
+            margin-bottom: 15px;
+        }
+
+        .section-partner {
+            height: auto;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .section-partner-title {
+            width: 90%;
+            font-size: 32px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-partner-text {
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .section-partner-wrapper-icone {
+            width: 90%;
+        }
+
+        .section-benefits {
+            height: auto;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .section-benefits-title {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .section-benefits-text {
+            width: 90%;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-benefits-wrapper-icone {
+            width: 90%;
+        }
+
+        .section-native {
+            height: auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .section-native-image {
+            margin-bottom: 16px;
+            width: 175px;
+        }
+
+        .section-native-title {
+            width: 90%;
+        }
+
+        .section-integration {
+            height: auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .footer {
+            height: 60px;
+        }
+
+        .footer-logo {
+            width: 95px;
+        }
+    }
+
+    @media (max-width: 650px) {
+
+        .-desktop {
+            display: none;
+        }
+
+        .-desktop-text {
+            display: none;
+        }
+
+        .section-form-text {
+            width: 75%;
+            line-height: 20px;
+        }
+
+        .form>button {
+            font-size: 24px;
+        }
+
+        .form>p {
+         
+         font-size: 14px;
+         display: block;
+         text-align: center;
+         margin-right: auto;
+         margin-left: auto;
+         margin-top: 5px;
+     }
+
+        .section-case-title {
+            font-size: 22px;
+        }
+
+        .section-case-wrapper-row-image {
+            width: 500px;
+        }
+
+        .section-case-image {
+            width: 90px;
+        }
+
+        .section-case-wrapper-row-image {
+            width: 350px;
+        }
+
+        .section-partner-title {
+            font-size: 24px;
+        }
+
+        .section-partner-icone {
+            margin-top: 0px;
+        }
+
+        .section-partner-wrapper-icone {
+            flex-wrap: wrap;
+        }
+
+        .section-partner-icone {
+            width: 150px;
+        }
+
+        .section-partner-icone>img {
+            width: 80px;
+            margin-bottom: 0;
+        }
+
+        .section-partner-text {
+            font-size: 17px;
+        }
+
+        .section-partner-icone>h3 {
+            font-size: 20px;
+        }
+
+        .section-benefits-title {
+            font-size: 24px;
+        }
+
+        .section-benefits-text {
+            font-size: 16px;
+        }
+
+        .section-benefits-wrapper-icone {
+            width: 80%;
+            flex-wrap: wrap;
+        }
+
+        .section-integration-title {
+            font-size: 24px;
+        }
+
+        .section-native-title {
+            font-size: 16px;
+        }
+
+        .section-demonstration {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #fff;
+            background-color: #031033;
+            order: 8;
+        }
+
+        .section-demonstration-title {
+            width: 90%;
+            font-size: 40px;
+            font-weight: bold;
+            line-height: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+        }
+
+        .section-demonstration-title>img {
+            width: 40px;
+            position: absolute;
+            margin-left: 20px;
+        }
+
+        .section-demonstration-text {
+            line-height: 26px;
+            text-align: justify;
+            width: 90%;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            word-wrap: break-word;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+        }
+
+        .section-demonstration-text>span {
+            color: rgba(7, 193, 84, 0.9)
+        }
+
+        .-section-mobile {
+            display: flex;
+            order: 9;
+            background-color: #f2f6f9;
+            color: #031033;
+        }
+
+        .-form-mobile{
+            display: flex;
+        }
+
+        .footer {
+            background-color: #C4CAD3;
+        }
+
+    }
+
+    @media (max-width: 430px) {
+        .section-benefits-wrapper-icone {
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 390px) {
+        .logo-canalfy {
+            width: 100px;
+        }
+
+        .section-form-title {
+            font-size: 24px;
+        }
+
+        .section-form-text {
+            font-size: 16px;
+        }
+
+        .-mobile-text {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0px;
+            margin-bottom: 10px;
+        }
+
+
+        .form {
+            width: 85%;
+        }
+
+        .form>label {
+            margin-bottom: 15px;
+        }
+
+        .form>button {
+            font-size: 18px;
+        }
+
+        .section-case {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .section-case-title {
+            font-size: 17px;
+            line-height: 24px;
+        }
+
+        .section-case-wrapper-row-image {
+            width: 280px;
+        }
+
+        .section-case-image {
+            width: 70px;
+        }
+
+        .section-partner-title {
+            margin-bottom: 15px;
+        }
+
+        .section-partner-text {
+            font-size: 17px;
+            margin: 20px auto;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+        }
+
+        .section-partner-wrapper-icone {
+            width: 100%;
+        }
+
+        .section-partner-icone>h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .section-partner-icone>p {
+            font-size: 12px;
+        }
+
+        .section-benefits {
+            height: auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .section-benefits-text {
+            word-wrap: break-word;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+        }
+
+        .section-benefits-wrapper-icone {
+            width: 90%;
+        }
+
+        .section-benefits-icone {
+            width: 150px;
+            margin-top: 15px;
+        }
+
+        .section-integration-title {
+            font-size: 18px;
+        }
+
+        .section-native-title {
+            word-wrap: break-word;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+        }
+    }
+
+    @media (max-width: 320px) {
+        .section-form {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .section-benefits-wrapper-icone {
+            width: 95%;
+        }
+    }
+</style>
+
+<body>
+    <header class="header">
+        <img class="logo-canalfy" src="img/logo-canalfy.png" alt="Logo Canalfy" />
+    </header>
+    <main>
+        <section class="section-form">
+            <h1 class="section-form-title">
+                Tenha seu Próprio Canal de Parceiros e Atraia Pessoas Para Revender os
+                Produtos da Sua Loja Online
+            </h1>
+
+            <div class="section-form-wrapper-icone -form-mobile">
+                <div class="section-form-icone">
+                    <img src="img/icone-industria.png" alt="icone de industria" />
+                    <h3>Indústria</h3>
+                </div>
+
+                <div class="section-form-icone">
+                    <img src="img/icone-varejo.png" alt="icone de sacola" />
+                    <h3>Varejo</h3>
+                </div>
+
+                <div class="section-form-icone">
+                    <img src="img/icone-globo.png" alt="icone de globo" />
+                    <h3>Tecnologia</h3>
+                </div>
+
+                <div class="section-form-icone">
+                    <img src="img/icone-beleza-saude.png" alt="icone de saude" />
+                    <h3>Beleza e Saúde</h3>
+                </div>
+            </div>
+
+            <p class="section-form-text -desktop-text">
+                Preencha o formulário abaixo para acessar a demonstração
+            </p>
+
+            <form class="form -desktop" action="">
+                <label for="name">
+                    <span>Nome:</span>
+                    <input type="text" id="name" name="user_name" />
+                </label>
+                <label for="email">
+                    <span>E-mail:</span>
+                    <input type="email" id="email" name="email" />
+                </label>
+                <label for="phone">
+                    <span>Telefone | WhatsApp:</span>
+                    <input type="text" id="phone" name="phone" />
+                </label>
+                <button>Instalar Aplicativo</button>
+            </form>
+        </section>
+
+        <section class="section-case">
+            <h2 class="section-case-title">
+                A Mesma Estratégia de Vendas Utilizadas por Grandes Marcas,
+                <span>Agora ao Alcance do Seu E-commerce.</span>
+            </h2>
+
+            <div class="section-case-wrapper-image">
+                <div class="section-case-wrapper-row-image">
+                    <img class="section-case-image" src="img/logo-wiseup.png" alt="Logo Wiseup" />
+                    <img class="section-case-image" src="img/logo-avon.png" alt="Logo Avon" />
+                    <img class="section-case-image" src="img/logo-boticario.png" alt="Logo Boticario" />
+                </div>
+                <div class="section-case-wrapper-row-image">
+                    <img class="section-case-image" src="img/logo-marisa.png" alt="Logo Marisa" />
+                    <img class="section-case-image" src="img/logo-tudoforte.png" alt="Logo Tudo Forte" />
+                    <img class="section-case-image" src="img/logo-magalu.png" alt="Logo Magalu" />
+                </div>
+            </div>
+        </section>
+
+        <section class="section-partner">
+            <div class="section-partner-wrapper-content">
+                <h2 class="section-partner-title">
+                    Conheça o Case de Sucesso: Tudo Forte
+                </h2>
+
+                <p class="section-partner-text">
+                    "O Programa Parceiro Tudo Forte nasceu da vontade de melhorar as
+                    condições comerciais para os Instaladores de Segurança Eletrônica.
+                    Nós percebíamos que muitos instaladores perdiam vendas e prestações
+                    de serviços, pois não tinham capital de giro para aplicar na compra
+                    de produtos.
+                </p>
+
+                <p class="section-partner-text">
+                    Iniciamos o planejamento com a Canalfy e logo no primeiro mês foi um
+                    sucesso, conseguimos vender R$ 31.670,21 e atualmente os resultados
+                    somam mais de 2,5 milhões em venda, somente pelo programa.
+                </p>
+
+                <p class="section-partner-text">
+                    Hoje, no período da pandemia, desenvolvemos outro propósito: ajudar
+                    um número ainda maior de pessoas com uma garantia de renda para sua
+                    família."
+                </p>
+
+                <p class="section-partner-text">
+                    Por Rodrigo Soares, Sócio Diretor Comercial
+                </p>
+            </div>
+
+            <div class="section-partner-wrapper-icone">
+                <div class="section-partner-icone">
+                    <img src="img/icone-parceira.png" alt="icone de parceria" />
+                    <h3>+2,5 mil</h3>
+                    <p>parceiros na base</p>
+                </div>
+
+                <div class="section-partner-icone">
+                    <img src="img/icone-calculadora.png" alt="icone de calculadora" />
+                    <h3>+6 mil</h3>
+                    <p>orçamentos gerados</p>
+                </div>
+
+                <div class="section-partner-icone">
+                    <img src="img/icone-dinheiro.png" alt="icone de dinheiro" />
+                    <h3>R$ 2.407.501,66</h3>
+                    <p>em receita faturada</p>
+                </div>
+
+                <div class="section-partner-icone">
+                    <img src="img/icone-crescimento.png" alt="icone de parceria" />
+                    <h3>6x mais</h3>
+                    <p>taxa de conversão</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-benefits">
+            <div class="section-benefits-wrapper-content">
+                <h2 class="section-benefits-title">Um Pouco Sobre Nós</h2>
+
+                <p class="section-benefits-text">
+                    A Canalfy é uma empresa especializada em criar canais de parceiros e
+                    possibilitar que sua empresa atraia pessoas que possam revender os
+                    produtos da sua loja online.
+                </p>
+            </div>
+
+            <div class="section-benefits-wrapper-icone">
+                <div class="section-benefits-icone">
+                    <img src="img/icone-calculado-preco.png" alt="icone de calculadora" />
+                    <p>Gere Orçamento Online e Otimize a Experiência do Usuário</p>
+                </div>
+
+                <div class="section-benefits-icone">
+                    <img src="img/icone-mao-negocio.png" alt="icone de mão negócio" />
+                    <p>Preço, Frete, Estoque e Formas de Pagamento, em Tempo Real</p>
+                </div>
+
+                <div class="section-benefits-icone">
+                    <img src="img/icone-computador.png" alt="icone de computador whatsapp" />
+                    <p>Integração do Orçamento Online com Whatsapp Web</p>
+                </div>
+
+                <div class="section-benefits-icone">
+                    <img src="img/icone-carrinho.png" alt="icone de carrinho de compra" />
+                    <p>
+                        Link Personalizado de Oferta, Levando o Cliente Direto ao Carrinho
+                        da Loja
+                    </p>
+                </div>
+            </div>
+
+            <div class="section-benefits-wrapper-icone">
+                <div class="section-benefits-icone">
+                    <img src="img/icone-mundo.png" alt="icone de um globo" />
+                    <p>
+                        Utilize Seu Site Como Plataforma de Vendas Através de Parceiros
+                    </p>
+                </div>
+
+                <div class="section-benefits-icone">
+                    <img src="img/icone-cadastro.png" alt="icone de cadastro" />
+                    <p>Cadastro Automático de Parceiros Via Formulário</p>
+                </div>
+
+                <div class="section-benefits-icone">
+                    <img src="img/icone-relatorio.png" alt="icone de relatório" />
+                    <p>Dashboard e Relatórios Detalhados</p>
+                </div>
+
+                <div class="section-benefits-icone">
+                    <img src="img/icone-dinheiro-renovado.png" alt="icone de carrinho de compra" />
+                    <p>Mensure as Conversões do Novo Canal</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-integration">
+            <h2 class="section-integration-title">Integração Nativa Tray</h2>
+        </section>
+
+        <section class="section-native">
+            <img class="section-native-image" src="img/logo-tray.png" alt="Logo Tray" />
+            <h2 class="section-native-title">
+                A Integração Entre Canalfy e Tray foi Desenvolvida de Forma Nativa,
+                Para Você conseguir Gerenciar, Rastrear e Aumentar a sua Própria Força
+                de Vendas de Forma Simples e Fluida.
+            </h2>
+        </section>
+
+        <section class="section-demonstration">
+            <h2 class="section-demonstration-title">
+                Solicite uma Demonstração Gratuita
+                <img src="img/icone-pointer.png" alt="Icone Mão Apontando">
+            </h2>
+
+            <p class="section-demonstration-text">
+                Com apenas alguns cliques, a sua loja se transformará em uma <span>plataforma</span> de vendas
+                <span>online</span> para sua rede de <span>parceiros</span> e revendedores.
+            </p>
+
+            <p class="section-demonstration-text" style="font-style: italic;">
+                A tecnologia da Canalfy se adequará ao seu e-commerce de forma intuitiva e clara.
+            </p>
+
+            <p class="section-demonstration-text">
+                Conheça a plataforma online mais completa para implementação e gestão de desempenho em parceiros.
+            </p>
+        </section>
+
+        <section class="section-form -section-mobile">
+            <p class="section-form-text -mobile-text">
+                Preencha o formulário abaixo para acessar a demonstração
+            </p>
+
+            <form class="form" action="">
+                <label for="name">
+                    <span>Nome:</span>
+                    <input type="text" id="name" name="user_name" />
+                </label>
+                <label for="email">
+                    <span>E-mail:</span>
+                    <input type="email" id="email" name="email" />
+                </label>
+                <label for="phone">
+                    <span>Telefone | WhatsApp:</span>
+                    <input type="text" id="phone" name="phone" />
+                </label>
+                <button>Instalar Aplicativo</button>
+                <p>Aproveite, clique aqui e solicite já</p>
+            </form>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <img class="footer-logo" src="img/logo-rodape.png" alt="Logo Canalfy" />
+    </footer>
+</body>
+
+</html>
